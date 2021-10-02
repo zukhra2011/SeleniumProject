@@ -28,7 +28,7 @@ public class Table_Tasks {
 
     @Test
     public void task3_return_times_due_amount(){
-        String url=Configuration_Reader.getProperty("dataTablesUrl"));
+        String url=Configuration_Reader.getProperty("dataTablesUrl");
        driver.get(url);
 //Locating first table and verify Tim has due amount of "$50"
         WebElement timsDueAmount= driver.findElement(By.xpath("//table[@id='table1']//td[.='Tim']/following-sibling::td[2]"));

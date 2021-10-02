@@ -12,7 +12,7 @@ public class Driver {
     so this class is not reachable from outside
      */
     private Driver(){}
-        //makign our driver instance
+        //making our driver instance
         // private so that its not reachable from outside
         //of the class. We make it static, because we want it to run
         // before everything else, we will use it in a static method
@@ -43,4 +43,16 @@ public class Driver {
 //same driver instance will be returned every time we call Driver.getDriver(); method
 
 return driver;
-}}
+}
+
+public static void closeDriver(){
+        if (driver!=null){
+            driver.quit();
+            driver=null;
+        }
+
+}
+
+
+}
+
