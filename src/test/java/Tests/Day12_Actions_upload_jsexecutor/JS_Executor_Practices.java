@@ -30,6 +30,14 @@ public void scroll_using_jsExecutor_tester2(){
         JavascriptExecutor js=(JavascriptExecutor)Driver.getDriver();
      WebElement Cyberteklink=Driver.getDriver().findElement(By.xpath("//a[@href='https://cybertekschool.com/']"));
      //by link would be (By linkText("Cybertek School"));
+    WebElement homeLink=Driver.getDriver().findElement(By.linkText("Home"));
+    //use js. executor with different scrolling JavaScript function
+    js.executeScript("arguments[0].scrollIntoView(true)",Cyberteklink);
+    //scroll up to Home link
+    BrowserUtil.sleep(1);
+    js.executeScript("arguments[0].scrollIntoView(true)",homeLink);
+
+
 
 
 
