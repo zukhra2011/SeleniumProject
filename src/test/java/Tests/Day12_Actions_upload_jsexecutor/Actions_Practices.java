@@ -27,6 +27,7 @@ public class Actions_Practices {
         Actions actions = new Actions(Driver.getDriver());
         //2. Hover over to first image
         actions.moveToElement(img1).perform();
+        //
 
 
         //3.Assert
