@@ -3,6 +3,7 @@ package Tests.Day12_Actions_upload_jsexecutor;
 import Tests.Utilities.BrowserUtil;
 import Tests.Utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -46,4 +47,30 @@ public class Actions_Practices {
 
     }
 
+    @Test
+    public void scrolling_test(){
+        Driver.getDriver().get("http://practice.cybertekschool.com/");
+        //scroll down to "Powered By Cybertek School"
+        Actions actions=new Actions(Driver.getDriver());
+        //Locate "Powered By Cybertek School"
+        WebElement cybertekSchoolLink= Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        //Scroll using actions object
+        BrowserUtil.sleep(2);
+        actions.moveToElement(cybertekSchoolLink).perform();
+        //Scrolling up using Keys.Page_Up button
+        BrowserUtil.sleep(2);
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        //Scrolling down using Keys.Page_UP button
+        BrowserUtil.sleep(2);
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        //Scrolling down using Keys.Page_Down button
+        BrowserUtil.sleep(2);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+
+
+
+
+
+    }
 }
